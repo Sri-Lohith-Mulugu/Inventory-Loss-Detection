@@ -1,4 +1,4 @@
-# YottaFlex Inventory Loss Detection
+#  Inventory Loss Detection
 
 ## Overview
 
