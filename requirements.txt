@@ -1,0 +1,9 @@
+# Direct runtime dependencies and their transitive runtime dependencies pinned
+# to the versions used by the verified Python 3.12 environment.
+pandas==2.2.3
+numpy==2.2.5
+Faker==40.54.0
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.2
+six==1.17.0

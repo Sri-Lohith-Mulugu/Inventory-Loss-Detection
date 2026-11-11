@@ -1,0 +1,19 @@
+# Python virtual environments and interpreter artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Generated pipeline outputs
+output/
+custom_out/
+tmp-out/
+
+# Temporary pipeline, test, and reproducibility directories
+inventory-test-*/
+inventory-repro-*/
+inventory-verify-run-*/
+.clean-verification-*/
