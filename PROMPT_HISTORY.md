@@ -114,6 +114,28 @@ The audit found a three-digit EmployeeRole identifier incompatible with 1,000 un
 
 This file consolidates the development prompts and later audit/verification steering. Protected source wording remains summarized. Candidate-specific claims are presented for candidate review rather than asserted as facts by the AI.
 
+### Python & Pandas Environment Compatibility
+
+**User prompt summary**
+
+> Diagnose the active Python and pandas/NumPy versions, align the local environment with the pinned compatible dependencies, and rerun starter, unit, SQL-load, and reproducibility checks without changing application logic.
+
+**Steering and outcome**
+
+The system interpreter was Python 3.12.6 with pandas 2.2.3 and NumPy 2.2.5, matching `requirements.txt`. The existing `.venv` also used Python 3.12.6 but had pandas 3.1.1 and NumPy 2.5.4, which did not match the project's tested pins. The `.venv` was aligned to the pinned versions. `README.md` now directs setup to Python 3.12.6, and the requirements comment records that verified baseline. No Python source, schema, ID rule, generator, detector, or validation assertion was changed.
+
+The repaired `.venv` passed `main.py --scale starter` with 8/8 validation groups, all 12 unit/integration tests, the 16-file SQLite seed-load check, and full-scale reproducibility verification (51 artifacts, 100% SHA-256 match).
+
+### GitHub Repository Sync & Publication
+
+**User prompt summary**
+
+> Publish the project to the supplied GitHub repository while preserving existing work and excluding generated/private artifacts.
+
+**Steering and outcome**
+
+The existing GitHub `main` branch contained commits not present in the local branch, so that history was fetched and fast-forwarded before publication. The README and traceability matrix were edited to omit exact assessment-email timing; the original PDF and generated output remain outside the commit. The dependency/setup updates were committed and pushed. An unauthenticated `git ls-remote` confirmed the pushed repository was publicly readable. The current Git log retains the remote commits and the new project/documentation commits; it does not reconstruct earlier development events that were not committed at the time.
+
 ## Engineering Bug Fix & Remediation Log
 
 | Issue | Remediation | Verification evidence |
