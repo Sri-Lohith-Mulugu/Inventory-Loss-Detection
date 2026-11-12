@@ -1,4 +1,4 @@
-#  Inventory Loss Detection
+# Inventory Loss Detection
 
 ## Overview
 
@@ -24,12 +24,12 @@ config.py -> master_data.py -> transactions.py -> anomalies.py
 
 ## Setup
 
-Python 3.10 or newer is required. Runtime dependencies and the required transitive packages are pinned exactly in `requirements.txt`; the clean-environment verification was run on Python 3.12.6.
+Use Python 3.12.6 as the verified runtime baseline. The pinned dependencies in `requirements.txt` were tested with that interpreter. Other compatible Python 3.12+ releases may work, but rerun the verification commands before relying on byte-for-byte reproducibility.
 
 ### Windows PowerShell
 
 ```powershell
-py -3 -m venv .venv
+py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
@@ -38,7 +38,7 @@ python -m pip install -r requirements.txt
 ### macOS or Linux
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
@@ -116,11 +116,11 @@ The generator is synthetic-only and does not ingest external datasets. `source_m
 
 The supplied Guidelines request an executable project, visible assumptions and trade-offs, prompt history, honest AI-use disclosure, and a public GitHub repository with meaningful development history. The FAQ permits AI tools, does not mandate an automated test suite, and expects the candidate to understand and validate the work. `PROMPT_HISTORY.md` records AI-assisted development and this repository's verification evidence; the candidate must review and be able to explain the implementation personally.
 
-The assessment email PDF supplied for this project states that it was sent on November 11, 2026 at 3:17 PM IST and gives a deadline of November 14, 2026 at 3:11:11 PM IST. Those two displayed times differ by 5 minutes 49 seconds from exactly 72 hours, so the stated deadline is transcribed as provided and the discrepancy is not silently reconciled. The email also says not to share or publish assessment content, problem statements, or interview questions. Do not include the official statement, PDFs, or email in any public repository; publish only authorized project work and review all files for secrets and personal/sensitive information.
+The supplied assessment email contains submission timing and confidentiality instructions. Consult the original privately; its contents and exact timing are not reproduced here. Do not include the official statement, PDFs, or email in any public repository. Publish only authorized project work and review all files for secrets and personal or sensitive information.
 
 ### Candidate ownership and AI collaboration disclosure
 
 OpenAI ChatGPT/Codex assisted with requirement decomposition, architecture iteration, Python and SQL implementation, debugging, documentation, and test authoring. The work used staged prompts: first define the pipeline and data contract, then implement bounded modules, then audit observed behavior and address evidence-backed gaps. 
 
-During this continuation, observed defects included nullable empty strings being serialized as SQL empty strings (causing foreign-key failures), incomplete ID-format checks, and stale field/lifecycle documentation. The implementation was corrected and then checked through a clean temporary environment, starter execution, unit/integration tests, full-scale generation, and SQL seed loading. The candidate remains responsible for personally reviewing and understanding the submitted code, deciding whether to adopt it, and accurately describing any independent work ; see [PROMPT_HISTORY.md](PROMPT_HISTORY.md) for the collaboration record.
+During this continuation, observed defects included nullable empty strings being serialized as SQL empty strings (causing foreign-key failures), incomplete ID-format checks, and stale field/lifecycle documentation. The implementation was corrected and then checked through a clean temporary environment, starter execution, unit/integration tests, full-scale generation, and SQL seed loading. The candidate remains responsible for personally reviewing and understanding the submitted code, deciding whether to adopt it, and accurately describing any independent work; see [PROMPT_HISTORY.md](PROMPT_HISTORY.md) for the collaboration record.
 

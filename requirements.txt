@@ -1,5 +1,5 @@
 # Direct runtime dependencies and their transitive runtime dependencies pinned
-# to the versions used by the verified Python 3.12 environment.
+# to the versions used by the verified Python 3.12.6 environment.
 pandas==2.2.3
 numpy==2.2.5
 Faker==40.54.0
