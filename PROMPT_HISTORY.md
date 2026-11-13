@@ -1,5 +1,5 @@
 # Chat link
-https://chatgpt.com/s/cx_6af4c25f8c98819194b17e3fbfe6d610
+https://chatgpt.com/s/cx_6af68b7f061081918b4ee9071296ecfa
 
 
 
