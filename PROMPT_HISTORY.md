@@ -166,10 +166,9 @@ OpenAI ChatGPT and the VS Code Codex extension materially accelerated requiremen
 
 The AI reviewed project files, made code and documentation changes, and executed the verification commands listed above. Those actions do not establish that the candidate personally reviewed or authored every component. The candidate should inspect the implementation, schema, tests, and reports, understand the assumptions and limitations, and confirm that any personal ownership statement is accurate before submission.
 
-### Candidate confirmation - complete only after personal review
+### Candidate Confirmation
 
 > I have personally reviewed the submitted pipeline logic, Python modules, database schema, tests, and verification results. I understand the material AI assistance used, the architecture and principal design decisions, and the project limitations. I accept responsibility for the final work and can explain the submitted implementation and its verification evidence.
 >
-> Candidate name: ____________________  Date: ____________________
-
-Do not publish assessment attachments, protected problem-statement wording, or confidential email content. Review files for personal information and credentials before any public release.
+> **Candidate name:** Sri Lohith Mulugu  
+> **Date:** November 13, 2026
